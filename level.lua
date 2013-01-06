@@ -1,6 +1,7 @@
 Level = Core.class(Sprite)
 
-local ZOMBIE_COUNT = 3
+local ZOMBIES_COUNT = 3
+local NEW_ZOMBIE_PROBABILITY = 0.3
 
 local level
 local mouseDown = false
@@ -23,17 +24,12 @@ function Level:init(rowCount, columnCount, player)
 	end
 	
 	-- zombies
+	self.zombiesCount = 0
 	self.zombies = {}
-	for i = 1, ZOMBIE_COUNT do
-		local zombie = Zombie.new()
-		local row, column
-		repeat
-			row, column = self:randomZombieSquare()
-		until self:getZombies(row, column)[1] == nil
-		zombie:setSquare(row, column)
-		self:addChild(zombie)
-		self.zombies[i] = zombie
+	for i = 1, ZOMBIES_COUNT do
+		self:createZombie()
 	end
+	self.newZombieProbability = NEW_ZOMBIE_PROBABILITY
 	
 	-- player
 	self.player = Player.new()
@@ -49,7 +45,7 @@ function Level:onMouseDown(event)
 	end
 
 	mouseDown = true
-	if self:hitTestPoint(event.x, event.y) and self:isAdjacent(level.player.row, level.player.column) then
+	if self:hitTestPoint(event.x, event.y) and level:playerCanMoveTo(self) then
 		event:stopPropagation()
 		if level.pressedSquare ~= nil then
 			level.pressedSquare:setPressed(false)
@@ -77,12 +73,16 @@ function Level:onMouseMove(event)
 			level.pressedSquare:setPressed(false)
 			level.pressedSquare = nil
 		end
-		if self:hitTestPoint(event.x, event.y) and self:isAdjacent(level.player.row, level.player.column) then
+		if self:hitTestPoint(event.x, event.y) and level:playerCanMoveTo(self) then
 			self:setPressed(true)
 			level.pressedSquare = self
 			event:stopPropagation()
 		end
 	end
+end
+
+function Level:playerCanMoveTo(square)
+	return square:isAdjacent(self.player.row, self.player.column) and self:getZombies(square.row, square.column)[1] == nil
 end
 
 function Level:randomZombieSquare()
@@ -107,6 +107,18 @@ function Level:randomZombieSquare()
 		column = self.columnCount - 1
 	end
 	return row, column
+end
+
+function Level:createZombie()
+	local zombie = Zombie.new()
+	local row, column
+	repeat
+		row, column = self:randomZombieSquare()
+	until self:getZombies(row, column)[1] == nil
+	zombie:setSquare(row, column)
+	self:addChild(zombie)
+	self.zombiesCount = self.zombiesCount + 1
+	self.zombies[self.zombiesCount] = zombie
 end
 
 function Level:getZombies(row, column)
@@ -143,6 +155,18 @@ function Level:playZombies()
 		end
 		
 		level.playerTurn = true
+		
+		-- create a new zombie if needed
+		local remainingZombies = 0
+		for i, zombie in ipairs(self.zombies) do
+			if not zombie.destroyed then
+				remainingZombies = remainingZombies + 1
+			end
+		end
+		if remainingZombies == 0 or math.random() <= self.newZombieProbability then
+			self:createZombie()
+		end
+		self.newZombieProbability = self.newZombieProbability + 0.05
 	end
 	
 	timer:addEventListener(Event.TIMER, onTimer)
