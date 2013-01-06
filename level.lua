@@ -39,9 +39,15 @@ function Level:init(rowCount, columnCount, player)
 	self.player = Player.new()
 	self.player:setSquare(math.floor(columnCount / 2), math.floor(rowCount / 2))
 	self:addChild(self.player)
+	
+	self.playerTurn = true
 end
 
 function Level:onMouseDown(event)
+	if not level.playerTurn then
+		return
+	end
+
 	mouseDown = true
 	if self:hitTestPoint(event.x, event.y) and self:isAdjacent(level.player.row, level.player.column) then
 		event:stopPropagation()
@@ -116,7 +122,10 @@ function Level:getZombies(row, column)
 end
 
 function Level:playZombies()
+	self.playerTurn = false
+	
 	local timer = Timer.new(500, 1)
+	
 	local function onTimer(event)
 		-- move zombies
 		for i, zombie in ipairs(self.zombies) do
@@ -132,7 +141,10 @@ function Level:playZombies()
 				zombie:setDestroyed()
 			end
 		end
+		
+		level.playerTurn = true
 	end
+	
 	timer:addEventListener(Event.TIMER, onTimer)
 	timer:start()
 end
