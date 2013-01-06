@@ -1,0 +1,18 @@
+<project>
+ <properties autorotation="0" fps="60" scaleMode="3" mouseToTouch="1" iosDevice="0" packageName="com.yourdomain.yourapp" logicalHeight="480" logicalWidth="320" mouseTouchOrder="0" retinaDisplay="0" touchToMouse="1" assetsOnly="0" orientation="0" architecture="0">
+  <imageScales/>
+ </properties>
+ <folder name="img">
+  <file source="img/test_player.png"/>
+  <file source="img/test_square.png"/>
+  <file source="img/test_square_pressed.png"/>
+  <file source="img/test_zombie.png"/>
+  <file source="img/test_zombie_destroyed.png"/>
+ </folder>
+ <file source="character.lua"/>
+ <file source="level.lua"/>
+ <file source="main.lua"/>
+ <file source="player.lua"/>
+ <file source="square.lua"/>
+ <file source="zombie.lua"/>
+</project>
