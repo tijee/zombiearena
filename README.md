@@ -1,4 +1,4 @@
-zombiearena
-===========
+Zombie Arena
+============
 
-An arcade game where the player must escape and destroy zombies
+An mobile arcade game where the player must escape and destroy zombies
