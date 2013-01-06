@@ -3,6 +3,7 @@
   <imageScales/>
  </properties>
  <folder name="img">
+  <file source="img/test_button.jpg"/>
   <file source="img/test_player.png"/>
   <file source="img/test_square.png"/>
   <file source="img/test_square_pressed.png"/>
@@ -10,7 +11,7 @@
   <file source="img/test_zombie_destroyed.png"/>
  </folder>
  <file source="character.lua"/>
- <file source="level.lua"/>
+ <file source="game.lua"/>
  <file source="main.lua"/>
  <file source="player.lua"/>
  <file source="square.lua"/>

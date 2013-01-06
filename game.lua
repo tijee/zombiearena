@@ -5,13 +5,12 @@ local COLUMN_COUNT = 9
 local ZOMBIES_COUNT = 3
 local NEW_ZOMBIE_PROBABILITY = 0.3
 
-local game
 local mouseDown = false
 
 function Game:init()
-	game = self
 	self:setPosition((application:getLogicalWidth() - COLUMN_COUNT * SQUARE_SIZE) / 2, (application:getLogicalHeight() - ROW_COUNT * SQUARE_SIZE) / 2)
 	
+	-- create squares
 	for row = 0, ROW_COUNT - 1 do
 		for column = 0, COLUMN_COUNT - 1 do
 			local square = Square.new(row, column)
@@ -22,11 +21,7 @@ function Game:init()
 		end
 	end
 	
-	self:newGame()
-end
-
-function Game:newGame()
-	-- zombies
+	-- create zombies
 	self.zombiesCount = 0
 	self.zombies = {}
 	for i = 1, ZOMBIES_COUNT do
@@ -34,7 +29,7 @@ function Game:newGame()
 	end
 	self.newZombieProbability = NEW_ZOMBIE_PROBABILITY
 	
-	-- player
+	-- create player
 	self.player = Player.new()
 	self.player:setSquare(math.floor(COLUMN_COUNT / 2), math.floor(ROW_COUNT / 2))
 	self:addChild(self.player)
@@ -160,8 +155,8 @@ function Game:playZombies()
 		if game:getZombies(game.player.row, game.player.column)[1] ~= nil then
 			-- player died in a horrible way!
 			local textfield = TextField.new(nil, "Game over")
-			textfield:setPosition((application:getLogicalWidth() - textfield:getWidth()) / 2, (application:getLogicalHeight() - textfield:getHeight()) / 2)
-			stage:addChild(textfield)
+			textfield:setPosition((game:getWidth() - textfield:getWidth()) / 2, (game:getHeight() - textfield:getHeight()) / 2)
+			game:addChild(textfield)
 			return
 		end
 		
