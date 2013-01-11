@@ -22,58 +22,58 @@ You level up by collecting stars that will appear in the arena during the game. 
 
 <table>
 	<tr>
-		<th>Level></th>
-		<th>Stars</th>
+		<th>Level</th>
+		<th>Needed stars</th>
 		<th>Item</th>
 	</tr>
 	<tr>
 		<td>Beginner</td>
-		<td>1</td>
+		<td>-</td>
 		<td>Walk</td>
 	</tr>
 	<tr>
 		<td>Amateur</td>
-		<td>2</td>
+		<td>1</td>
 		<td>Run: move 3 squares.</td>
 	</tr>
 	<tr>
 		<td>Graduate</td>
-		<td>3</td>
+		<td>2</td>
 		<td>Teleporter: teleport anywhere on the map.</td>
 	</tr>
 	<tr>
 		<td>Skilled</td>
-		<td>4</td>
+		<td>3</td>
 		<td>Axe: destroy a zombie on a square adjacent to yours.</td>
 	</tr>
 	<tr>
 		<td>Experienced</td>
-		<td>5</td>
+		<td>4</td>
 		<td>Shotgun: destroy a zombie anywhere on the map.</td>
 	</tr>
 	<tr>
 		<td>Professional</td>
-		<td>6</td>
+		<td>5</td>
 		<td>Hawkeye: see what's in the item boxes until you use another item.</td>
 	</tr>
 	<tr>
 		<td>Expert</td>
-		<td>7</td>
+		<td>6</td>
 		<td>Invisibility cloak: hide from the zombies until you use another item. Zombies will move randomly instead of in your direction.</td>
 	</tr>
 	<tr>
 		<td>Killer</td>
-		<td>8</td>
+		<td>7</td>
 		<td>Dynamite: destroy zombies in a 3x3 area anywhere on the map.</td>
 	</tr>
 	<tr>
 		<td>Scourge</td>
-		<td>9</td>
+		<td>8</td>
 		<td>Machine gun: destroy every zombie in the arena.</td>
 	</tr>
 	<tr>
 		<td>God</td>
-		<td>10</td>
+		<td>9</td>
 		<td>Time machine: undo as many turns as you have collected this item.</td>
 	</tr>
 </table>
