@@ -20,18 +20,61 @@ When it's your turn, you can do an action by picking an item from your item list
 
 You level up by collecting stars that will appear in the arena during the game. When you've got as many stars as needed, you gain a level.
 
-#### Levels
-
-Level			|   Stars to achieve 	|	Item  
-			|			|  
-1.  Beginner		|	    1		|	Walk  
-2.  Amateur		|	    2		|	Run: move 3 squares.  
-3.  Graduate		|	    3		|	Teleporter: teleport anywhere on the map.  
-4.  Skilled		|	    4		|	Axe: destroy a zombie on a square adjacent to yours.  
-5.  Experienced		|	    5		|	Shotgun: destroy a zombie anywhere in the arena.  
-6.  Professional	|	    6		|	Hawkeye: see what's in the item boxes until you use another item.  
-7.  Expert		|	    7		|	Invisibility cloak: hide from the zombies until you use another item. Zombies will move randomly instead of in your direction.  
-8.  Killer		|	    8		|	Dynamite: destroy zombies in a 3x3 area anywhere in the arena.  
-9.  Scourge		|	    9		|	Machine gun: destroy every zombie in the arena.  
-10. God			|	    10		|	Time machine: undo as many turns as you have collected this item.  
+<table>
+	<tr>
+		<th>Level></th>
+		<th>Stars</th>
+		<th>Item</th>
+	</tr>
+	<tr>
+		<td>Beginner</td>
+		<td>1</td>
+		<td>Walk</td>
+	</tr>
+	<tr>
+		<td>Amateur</td>
+		<td>2</td>
+		<td>Run: move 3 squares.</td>
+	</tr>
+	<tr>
+		<td>Graduate</td>
+		<td>3</td>
+		<td>Teleporter: teleport anywhere on the map.</td>
+	</tr>
+	<tr>
+		<td>Skilled</td>
+		<td>4</td>
+		<td>Axe: destroy a zombie on a square adjacent to yours.</td>
+	</tr>
+	<tr>
+		<td>Experienced</td>
+		<td>5</td>
+		<td>Shotgun: destroy a zombie anywhere on the map.</td>
+	</tr>
+	<tr>
+		<td>Professional</td>
+		<td>6</td>
+		<td>Hawkeye: see what's in the item boxes until you use another item.</td>
+	</tr>
+	<tr>
+		<td>Expert</td>
+		<td>7</td>
+		<td>Invisibility cloak: hide from the zombies until you use another item. Zombies will move randomly instead of in your direction.</td>
+	</tr>
+	<tr>
+		<td>Killer</td>
+		<td>8</td>
+		<td>Dynamite: destroy zombies in a 3x3 area anywhere on the map.</td>
+	</tr>
+	<tr>
+		<td>Scourge</td>
+		<td>9</td>
+		<td>Machine gun: destroy every zombie in the arena.</td>
+	</tr>
+	<tr>
+		<td>God</td>
+		<td>10</td>
+		<td>Time machine: undo as many turns as you have collected this item.</td>
+	</tr>
+</table>
 
