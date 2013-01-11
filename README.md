@@ -22,16 +22,16 @@ You level up by collecting stars that will appear in the arena during the game. 
 
 #### Levels
 
-Level			|   Stars to achieve 	|	Item
-			|			|
-1.  Beginner		|	    1		|	Walk
-2.  Amateur		|	    2		|	Run: move 3 squares.
-3.  Graduate		|	    3		|	Teleporter: teleport anywhere on the map.
-4.  Skilled		|	    4		|	Axe: destroy a zombie on a square adjacent to yours.
-5.  Experienced		|	    5		|	Shotgun: destroy a zombie anywhere in the arena.
-6.  Professional	|	    6		|	Hawkeye: see what's in the item boxes until you use another item.
-7.  Expert		|	    7		|	Invisibility cloak: hide from the zombies until you use another item. Zombies will move randomly instead of in your direction.
-8.  Killer		|	    8		|	Dynamite: destroy zombies in a 3x3 area anywhere in the arena.
-9.  Scourge		|	    9		|	Machine gun: destroy every zombie in the arena.
-10. God			|	    10		|	Time machine: undo as many turns as you have collected this item. 
+Level			|   Stars to achieve 	|	Item  
+			|			|  
+1.  Beginner		|	    1		|	Walk  
+2.  Amateur		|	    2		|	Run: move 3 squares.  
+3.  Graduate		|	    3		|	Teleporter: teleport anywhere on the map.  
+4.  Skilled		|	    4		|	Axe: destroy a zombie on a square adjacent to yours.  
+5.  Experienced		|	    5		|	Shotgun: destroy a zombie anywhere in the arena.  
+6.  Professional	|	    6		|	Hawkeye: see what's in the item boxes until you use another item.  
+7.  Expert		|	    7		|	Invisibility cloak: hide from the zombies until you use another item. Zombies will move randomly instead of in your direction.  
+8.  Killer		|	    8		|	Dynamite: destroy zombies in a 3x3 area anywhere in the arena.  
+9.  Scourge		|	    9		|	Machine gun: destroy every zombie in the arena.  
+10. God			|	    10		|	Time machine: undo as many turns as you have collected this item.  
 
